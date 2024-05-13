@@ -1,0 +1,25 @@
+.navbar-container {
+  height: 80px;
+  background-color: #000;
+  /* border: 1px solid white; */
+  position: fixed;
+  width: 100%;
+  max-width: 1500px;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 20px;
+  align-items: center;
+}
+
+.logo-and-title {
+  display: flex;
+  align-items: center;
+  max-width: 300px;
+}
+
+#logo {
+  height: 80px;
+  width: 80px;
+  cursor: pointer;
+}

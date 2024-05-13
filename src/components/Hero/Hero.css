@@ -1,0 +1,59 @@
+.hero-container {
+  width: 100%;
+  max-width: 1500px;
+  background-image: url('../../images/enhanced-hands-hero-image.png');
+  height: 700px;
+  background-size: cover;
+}
+
+@media (max-width: 1420px) {
+  .hero-container {
+    height: 600px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .hero-container {
+    height: 500px;
+  }
+}
+
+@media (max-width: 900px) {
+  .hero-container {
+    height: 450px;
+    background-position-y: 40px;
+  }
+}
+
+@media (max-width: 870px) {
+  .hero-container {
+    height: 400px;
+  }
+}
+
+@media (max-width: 800px) {
+  .hero-container {
+    height: 380px;
+  }
+}
+
+@media (max-width: 760px) {
+  .hero-container {
+    height: 350px;
+    background-repeat: no-repeat;
+  }
+}
+
+@media (max-width: 670px) {
+  .hero-container {
+    height: 300px;
+    background-position-y: 30px;
+  }
+}
+
+@media (max-width: 580px) {
+  .hero-container {
+    height: 300px;
+    background-position-x: center;
+  }
+}

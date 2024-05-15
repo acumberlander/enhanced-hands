@@ -1,9 +1,25 @@
-import React from 'react';
+'use client';
+
+import React, { useEffect, useState } from 'react';
 import './ExtraInfo.css';
 import Image from 'next/image';
 import placeholderImage from '@/images/enhanced-hands-logo.jpeg'
 
 const ExtraInfo = () => {
+  const [mobileView, setMobileView] = useState<boolean>(false);
+
+  useEffect(() => {
+    const setResponsiveness = () => {
+      return window.innerWidth < 1100
+        ? setMobileView(true)
+        : setMobileView(false);
+    };
+
+    setResponsiveness();
+
+    window.addEventListener('resize', () => setResponsiveness());
+  }, []);
+
   return (
     <div className='extra-info-container'>
           <div className="extra-info-header-container">
@@ -18,11 +34,17 @@ const ExtraInfo = () => {
               <li>We kindly ask that if you have to bring a guest only one is allowed on the premises.</li>
               <li>If you have any further questions, do not hesitate to get in touch with us on: **keonnaivy7@gmail.com**</li>
             </ul>
-          </div>
-        <div className='extra-info-images-container'>
-          <Image id="extra-top-img" className='extra-info-images' src={placeholderImage} alt="" />
-          <Image id="extra-bottom-img" className='extra-info-images' src={placeholderImage} alt="" />
         </div>
+        {
+          mobileView ? (
+          null
+          ): (
+          <div className='extra-info-images-container'>
+            <Image id="extra-top-img" className='extra-info-images' src={placeholderImage} alt="" />
+            <Image id="extra-bottom-img" className='extra-info-images' src={placeholderImage} alt="" />
+          </div>
+          )
+        }
       </div>
     </div>
   )

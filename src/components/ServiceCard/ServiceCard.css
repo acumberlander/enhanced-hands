@@ -1,0 +1,55 @@
+.service-card-container {
+  width: 100%;
+  max-width: 1000px;
+  border: 1px solid lightgray;
+  padding: 30px;
+  margin: 5px;
+}
+
+.info-and-button-container {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.time-and-price {
+  color: rgb(124, 124, 124); 
+}
+
+.book-btn {
+  background-color: #ea546f;
+  width: 120px;
+  border-radius: 5px;
+  border: none;
+  box-shadow: 0px 3px 8px 0px #000;
+  color: #fff;
+  height: 35px;
+}
+
+.book-btn:hover {
+  cursor: pointer;
+}
+
+.book-btn:active {
+  box-shadow: none;
+}
+
+.description-container {
+  margin-top: 25px;
+}
+
+.image-info-btn-container {
+  display: flex;
+}
+
+.service-image {
+  width: 60px;
+  height: 60px;
+}
+
+.title-description-btn-container {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  width: 100%;
+}

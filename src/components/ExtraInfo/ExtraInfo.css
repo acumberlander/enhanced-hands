@@ -6,7 +6,7 @@
   flex-direction: column;
   align-items: center;
   background-color: #fff7f2;
-  padding: 0 40px;
+  padding: 0 100px;
   box-sizing: border-box;
 }
 
@@ -19,6 +19,8 @@
   justify-content: center;
   align-items: center;
   margin-top: 40px;
+  position: relative;
+  top: 10px;
 }
 
 .extra-info-header-container h1 {

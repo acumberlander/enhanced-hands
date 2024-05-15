@@ -3,6 +3,8 @@ import "./page.css";
 import Navbar from "@/components/Navbar/Navbar";
 import BookingPolices from "@/components/BookingPolicies/BookingPolices";
 import ExtraInfo from "@/components/ExtraInfo/ExtraInfo";
+import BusinessInfo from "@/components/BusinessInfo/BusinessInfo";
+import ChooseAppointment from "@/components/ChooseAppointment/ChooseAppointment";
 
 const app = () => {
   return (
@@ -11,6 +13,8 @@ const app = () => {
       <Hero />
       <BookingPolices />
       <ExtraInfo />
+      <BusinessInfo />
+      <ChooseAppointment />
     </div>
   );
 }

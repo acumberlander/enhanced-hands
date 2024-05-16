@@ -43,13 +43,34 @@
 }
 
 .service-image {
-  width: 60px;
-  height: 60px;
+  width: 300px;
+  height: 300px;
+  max-width: 400px;
+  max-height: 500px;
+  margin-right: 30px;
+}
+
+@media (max-width: 800px) {
+  .info-and-button-container {
+    flex-direction: column;
+    align-items: left;
+    min-height: 100px;
+  }
+  .image-info-btn-container {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+  .service-image {
+    margin: 20px 0 0;
+    width: 100%;
+  }
+  .book-btn {
+    width: 100%;
+  }
 }
 
 .title-description-btn-container {
   display: flex;
-  justify-content: space-between;
   flex-direction: column;
   width: 100%;
 }

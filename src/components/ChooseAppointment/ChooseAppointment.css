@@ -9,6 +9,12 @@
   margin-top: 50px;
 }
 
+@media (max-width: 578px) {
+  .choose-appointment-container {
+    padding: 0 40px;
+  }
+}
+
 .num-and-header {
   display: flex;
   align-items: center;

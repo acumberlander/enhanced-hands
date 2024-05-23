@@ -1,4 +1,3 @@
-import { ExtraInfo } from '@/components/ExtraInfo/ExtraInfo';
 import { StaticImageData } from "next/image";
 import picRecreation from '@/images/picRecreation.jpeg';
 import shortFreestyleSet from '@/images/short_freestyle_set.jpeg';
@@ -14,20 +13,16 @@ import shortFullSet from '@/images/short_full_set.jpeg';
 import medFullSet from '@/images/med_full_set.jpeg';
 import longFullSet from '@/images/long_full_set.jpeg';
 import acrylicOverlay from '@/images/acrylic_overlay.jpeg';
-import { Dispatch, SetStateAction } from 'react';
-import { serviceOptionProps } from '@/components/ChooseAppointment/ChooseAppointment';
+
 
 export type serviceOption = {
-  id: number
+  id: number;
   title: string;
   time: string;
   price: number;
   image?: StaticImageData;
   description?: string;
   extraInfo?: string;
-  // setSelectedService?: (val: serviceOptionProps) => void;
-  // setIsServiceSelected?: (val: boolean) => void;
-  // selectedService?: serviceOption;
 }
 
 export const serviceOptions: serviceOption[] = [

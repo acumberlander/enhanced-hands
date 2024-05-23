@@ -1,17 +1,23 @@
 'use client';
 
-import Image from 'next/image';
+import Image, { StaticImageData } from 'next/image';
 import './ServiceCard.css';
 import { serviceOption } from '@/utils/options'
 import { Fragment } from 'react';
-import { serviceOptionProps } from '../ChooseAppointment/ChooseAppointment';
 
-const ServiceCard = ({ title, time, price, image, description, extraInfo, setSelectedService, selectedService }: serviceOption) => {
-  const logSelection = (serviceInfo: serviceOption) => {
-    if (serviceInfo !== undefined) {
-      setSelectedService(serviceInfo);
-    }
-  }
+export type serviceOptionProps = {
+  id: number
+  title: string;
+  time: string;
+  price: number;
+  image?: StaticImageData;
+  description?: string;
+  extraInfo?: string;
+  handleSelection: (id: number) => void;
+}
+
+const ServiceCard = ({ id, title, time, price, image, description, extraInfo, handleSelection }: serviceOptionProps) => {
+  
   return (
     <Fragment>
       <h4 style={{width: '100%', maxWidth: '1000px', margin: '10px 0 5px'}}>{extraInfo}</h4>
@@ -30,7 +36,7 @@ const ServiceCard = ({ title, time, price, image, description, extraInfo, setSel
                 <h4 className="service-title">{title}</h4>
                 <h4 className="time-and-price">{time} @ ${price}.00</h4>
               </div>
-              <button onClick={(e)=> logSelection({e, title, time, price, description, extraInfo})} className="book-btn">
+              <button onClick={()=> handleSelection(id)} className="book-btn">
                 <h4>Book</h4>
               </button>
             </div>

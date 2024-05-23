@@ -3,11 +3,14 @@
 import Image from 'next/image';
 import './ServiceCard.css';
 import { serviceOption } from '@/utils/options'
-import { Fragment, MouseEvent } from 'react';
+import { Fragment } from 'react';
+import { serviceOptionProps } from '../ChooseAppointment/ChooseAppointment';
 
-const ServiceCard = ({ title, time, price, image, description, extraInfo }: serviceOption) => {
-  const logSelection = (e: MouseEvent<HTMLButtonElement, MouseEvent>) => {
-    console.log(e.target);
+const ServiceCard = ({ title, time, price, image, description, extraInfo, setSelectedService, selectedService }: serviceOption) => {
+  const logSelection = (serviceInfo: serviceOption) => {
+    if (serviceInfo !== undefined) {
+      setSelectedService(serviceInfo);
+    }
   }
   return (
     <Fragment>
@@ -27,7 +30,7 @@ const ServiceCard = ({ title, time, price, image, description, extraInfo }: serv
                 <h4 className="service-title">{title}</h4>
                 <h4 className="time-and-price">{time} @ ${price}.00</h4>
               </div>
-              <button onClick={(e)=> logSelection(e)} className="book-btn">
+              <button onClick={(e)=> logSelection({e, title, time, price, description, extraInfo})} className="book-btn">
                 <h4>Book</h4>
               </button>
             </div>

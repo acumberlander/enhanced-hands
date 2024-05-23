@@ -10,9 +10,16 @@
   box-sizing: border-box;
 }
 
+@media (max-width: 768px) {
+  .extra-info-container { 
+    padding: 0;
+  }
+}
+
 .extra-info-header-container {
   height: 70px;
   width: 700px;
+  padding: 0 20px;
   background-color: #ed99ab;
   color: #fff;
   display: flex;
@@ -26,6 +33,18 @@
 .extra-info-header-container h1 {
   font-size: 40px;
 }
+
+@media (max-width: 700px) {
+  .extra-info-header-container {
+    width:100%;
+  }
+
+  .extra-info-header-container h1 {
+  font-size: 30px;
+  }
+}
+
+
 
 .bullet-container {
   background-color: #f1e3da;

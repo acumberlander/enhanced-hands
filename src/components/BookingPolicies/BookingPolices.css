@@ -14,9 +14,21 @@
   width: 100%;
 }
 
+@media (max-width: 500px) {
+  .notice-strip {
+    font-size: 14px;
+  }
+}
+
 .booking-header {
   font-size: 40px;
   color: #ed99ab;
+}
+
+@media (max-width: 700px) {
+  .booking-header {
+    font-size: 30px;
+  }
 }
 
 .policy-column-container {

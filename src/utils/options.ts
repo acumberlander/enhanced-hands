@@ -14,6 +14,8 @@ import shortFullSet from '@/images/short_full_set.jpeg';
 import medFullSet from '@/images/med_full_set.jpeg';
 import longFullSet from '@/images/long_full_set.jpeg';
 import acrylicOverlay from '@/images/acrylic_overlay.jpeg';
+import { Dispatch, SetStateAction } from 'react';
+import { serviceOptionProps } from '@/components/ChooseAppointment/ChooseAppointment';
 
 export type serviceOption = {
   id: number
@@ -23,6 +25,9 @@ export type serviceOption = {
   image?: StaticImageData;
   description?: string;
   extraInfo?: string;
+  // setSelectedService?: (val: serviceOptionProps) => void;
+  // setIsServiceSelected?: (val: boolean) => void;
+  // selectedService?: serviceOption;
 }
 
 export const serviceOptions: serviceOption[] = [
